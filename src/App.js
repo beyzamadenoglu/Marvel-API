@@ -143,10 +143,6 @@ function App() {
                         >&#62;</button>
                     </li>
                 </ul>
-
-                <button className = 'loadmore'>
-
-                </button>
             </div>
         </div>
     );
