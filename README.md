@@ -1,5 +1,8 @@
 # week3 case
 
+Please Check "master" branch for homework.
+
+
 https://developer.marvel.com/ API ını kullanarak geçen hafta ki çalışmanızı devam ettirmeniz istenmektedir.
 
 **HEDEF** : Bir React.JS projesi içerisinde API a istek atarak belirli dataları göstermek ve sayfalamak.
