@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+:root {
+    --backgroundcolor: #222222;
+    --white: #FFFFFF;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--backgroundcolor);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-top: -45px;
+}
+
+.mrvl-img{
+    width: 100%;
+    max-height: 100%;
+}
+
+.mrvl-logo{
+    margin-top: -20%;
+    flex-shrink: 0;
+    width: 31.5%;
+    height: auto;
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(255, 255, 255, 0.521));
+    filter: drop-shadow(1px 1px 1px rgba(255, 255, 255, 0.521));
+ 
+}
+
+.container{
+    margin-top: 118px;
+}
+
+.chars-container{
+    margin: auto;
+    width: 64%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2px; /* this */
+}
+
+.character {
+    border-top: 1px solid var(--white);
+    display: flex;
+    flex-shrink: 0;
+    width: 79%;
+    margin: auto;
+    height: auto;
+    padding-top: 10px;
+    margin-top: -60px;
+
+}
+
+.box {
+    position: relative;
+    border: 1px solid var(--white);
+    background-color: transparent;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 130px;
+    height: auto;
+}
+
+.box p {
+    text-align: center;
+    color: var(--white);
+    padding: 20px 15px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 21.09px;
+}
+
+.pagination {
+    list-style: none;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 143px;
+    width: auto;
+    position: absolute;
+    right: 17%;
+
+  }
+  
+  .pagination li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #7E7E7E;
+    padding: 8px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    
+  }
+
+  .pagination li.active{
+      background-color: white;
+      color:black;
+  }
+
+  .pagination li button {
+      background-color:transparent !important;
+      border:none;
+      color: #7E7E7E;
+      font-size: 12px;
+      cursor: pointer;
+  }
+
+  .pagination li button:hover{
+      background-color:white;
+      color:black;
+  }
+
+  .pagination li button:focus{
+      outline:none;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+
+  .loadcontainer {
+    height: 100vh;
+    width: 100vw;
+    font-family: Helvetica; }
+  
+  .loader {
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+    .loaderdot {
+      animation-name: loader;
+      animation-timing-function: ease-in-out;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      height: 20px;
+      width: 20px;
+      border-radius: 100%;
+      background-color: black;
+      position: absolute;
+      border: 2px solid white;
+      left: 40%; }
+      .loaderdot:first-child {
+        background-color: #ff0000;
+        animation-delay: 0.5s; }
+      .loaderdot:nth-child(2) {
+        background-color: #256fa9;
+        animation-delay: 0.4s; }
+      .loaderdot:nth-child(3) {
+        background-color: #0b5a2d;
+        animation-delay: 0.3s; }
+      .loaderdot:nth-child(4) {
+        background-color: #232737;
+        animation-delay: 0.2s; }
+      .loaderdot:nth-child(5) {
+        background-color: #e6b04a;
+        animation-delay: 0.1s; }
+      .loaderdot:nth-child(6) {
+        background-color: #382965;
+        animation-delay: 0s; }
+    .loadertext {
+      position: absolute;
+      top: 200%;
+      left: 0;
+      right: 0;
+      width: 4rem;
+      margin: auto; }
+      .loader--text:after {
+        content: "Loading";
+        font-weight: bold;
+        animation-name: loading-text;
+        animation-duration: 3s;
+        animation-iteration-count: infinite; }
+  
+  @keyframes loader {
+    15% {
+      transform: translateX(0); }
+    45% {
+      transform: translateX(230px); }
+    65% {
+      transform: translateX(230px); }
+    95% {
+      transform: translateX(0); } }
+  
+  @keyframes loading-text {
+    0% {
+      content: "Loading"; }
+    25% {
+      content: "Loading."; }
+    50% {
+      content: "Loading.."; }
+    75% {
+      content: "Loading..."; } }
+
+  /******** Extra small devices  *********/
+
+@media only screen and (max-width: 600px) {
+    .chars-container{
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        margin: auto;
+        margin-top: 130px;
+        }
+
+    .mrvl-img{
+        width: 100%;
+        height: 350px;
+        }
+        
+    .mrvl-logo{
+        margin-top: -35%;
+        width: 34.5%;
+        height: auto;
+        }
+        
+    .container{
+        margin-top: 90px;
+        }
+
+    .box p{
+        line-height: 50px;
+        }
+
+    p{
+        font-size: 14px;
+        }
+    
+    .pagination{
+       position:relative;
+       display:flex;
+       justify-content: center;
+       align-items: center;
+       right: 0;
+    }
+     .pagination  a {
+             font-size: 10px;
+            
+           }
+
+
+}
+
+
+
+
+/********* Small devices *********/
+@media only screen and (min-width: 600px) {
+    .box {
+       width: 29%;
+        }
+}
+
+/********* Medium devices *********/
+@media only screen and (min-width: 768px) {
+    .box {
+        width: 29%;
+     }
+
+     .pagination{
+        right: 17%;
+    }
+}
+
+/********* Large devices *********/
+@media only screen and (min-width: 992px) {
+    .box {
+       width: auto;
+    }
+
+    .pagination{
+        right: 20%;
+    }
+}
+
+/********* Extra Large devices *********/
+@media only screen and (min-width: 1200px) {
+    .box {
+    width: 178px;
+    }
+
+    .pagination{
+        right: 17%;
+    }
+}
+
+/********* Extra Large devices *********/
+@media only screen and (min-width: 1608px) {
+    .box {
+    width: 190px;
+    }
+
+    .pagination{
+        right: 17%;
+    }
+}
